@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UusiHarjoitus">
+
+    <Button
+        android:id="@+id/btnLopeta"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:text="Lopeta harjoitus"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnAiemmat"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="30dp"
+        android:text="Aiemmat Reitit"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btnLopeta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnUusi"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="30dp"
+        android:text="Uusi reitti"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btnAiemmat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textUusiHarjoitus"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:text="Uusi Harjoitus"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textColorLink="#FF0000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnUusi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
