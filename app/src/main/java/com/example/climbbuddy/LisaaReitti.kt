@@ -1,29 +1,17 @@
 package com.example.climbbuddy
 
 import android.annotation.SuppressLint
-import android.content.ContentValues.TAG
-import android.content.Context
-import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import androidx.camera.core.CameraSelector
-import androidx.camera.core.ImageAnalysis
-import androidx.camera.core.ImageCapture
-import androidx.camera.core.Preview
-import androidx.camera.lifecycle.ProcessCameraProvider
-import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.toDrawable
 import androidx.navigation.fragment.findNavController
 import com.example.climbbuddy.databinding.LisaaReittiBinding
-import com.google.common.util.concurrent.ListenableFuture
-import java.util.concurrent.Executors
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -53,13 +41,18 @@ class LisaaReitti : Fragment(), AdapterView.OnItemSelectedListener {
     ): View {
 
         _binding = LisaaReittiBinding.inflate(inflater, container, false)
-        return binding.root
 
+        return binding.root
     }
+
 
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        /*if(savedInstanceState!=null){
+            binding.btnYritys.text = savedInstanceState.getString("yritys")
+        }*/
 
         // Reitin värin alasvetovalikko
         val adapter = activity?.let{
@@ -89,9 +82,9 @@ class LisaaReitti : Fragment(), AdapterView.OnItemSelectedListener {
 
     }
 
-    //Kamera
 
     //Muutetaan reitin sekä otteiden alasvetovalikkojen taustaväriä valikosta valitun värin mukaan
+    @SuppressLint("SuspiciousIndentation")
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         val text: String = parent?.getItemAtPosition(position).toString()
             if (parent != null) {
@@ -137,5 +130,6 @@ class LisaaReitti : Fragment(), AdapterView.OnItemSelectedListener {
         super.onDestroyView()
         _binding = null
     }
+
 }
 
