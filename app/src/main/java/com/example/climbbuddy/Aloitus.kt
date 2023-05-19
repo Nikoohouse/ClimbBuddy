@@ -11,7 +11,7 @@ import com.example.climbbuddy.databinding.UusiHarjoitusBinding
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class SecondFragment : Fragment() {
+class Aloitus : Fragment() {
 
     private var _binding: UusiHarjoitusBinding? = null
 
@@ -33,7 +33,11 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnLopeta.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+            findNavController().navigate(R.id.action_Aloitus_to_ClimbBuddy)
+        }
+
+        binding.btnUusi.setOnClickListener {
+            findNavController().navigate(R.id.action_Aloitus_to_LisaaReitti)
         }
     }
 
