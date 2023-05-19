@@ -2,6 +2,8 @@ package com.example.climbbuddy
 
 import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
+import android.content.Context
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -40,7 +42,6 @@ class LisaaReitti : Fragment(), AdapterView.OnItemSelectedListener {
         "Valitse otteiden väri", "Valkoinen", "Keltainen", "Oranssi", "Vihreä", "Turkoosi",
         "Sininen", "Violetti", "Punainen", "Pinkki", "Musta"
     )
-
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -83,9 +84,9 @@ class LisaaReitti : Fragment(), AdapterView.OnItemSelectedListener {
         binding.btnYritys.setOnClickListener {
             yritys++
             binding.btnYritys.text = "Yrityksiä: $yritys"
+
         }
 
-        //Kamera
     }
 
     //Kamera
